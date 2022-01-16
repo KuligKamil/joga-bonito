@@ -10,7 +10,7 @@
 import {Component, Vue} from 'vue-property-decorator';
 
 @Component
-export default class About extends Vue {
+export default class Player extends Vue {
   headers = [
     {text: 'Dessert (100g serving)', align: 'start', sortable: false, value: 'name'},
     {text: 'Calories', value: 'calories'},
