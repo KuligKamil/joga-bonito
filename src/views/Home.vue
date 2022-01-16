@@ -1,9 +1,9 @@
-<template>
-  <hello-world />
+<template lang="pug">
+  <hello-world/>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 @Component({
@@ -11,22 +11,7 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
     HelloWorld,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+}
 </script>
-<!--<template>-->
-<!--  <hello-world />-->
-<!--</template>-->
-
-<!--<script lang="ts">-->
-<!--  import Vue from 'vue'-->
-<!--  import HelloWorld from '../components/HelloWorld.vue'-->
-
-<!--  export default Vue.extend({-->
-<!--    name: 'Home',-->
-
-<!--    components: {-->
-<!--      HelloWorld,-->
-<!--    },-->
-<!--  })-->
-<!--</script>-->
 

@@ -1,6 +1,5 @@
 <template lang="pug">
-  v-app#inspire
-    //v-data-iterator
+  v-app
     v-data-table.elevation-1(:headers='headers', :items='desserts', :items-per-page="-1")
       template(v-slot:item.isDone='{ item }')
         v-simple-checkbox(v-model='item.isDone', disabled='')
@@ -22,7 +21,12 @@ export default class About extends Vue {
   ]
   desserts = [
     {
-      name: 'Frozen Yogurt', calories: 159, fat: 6.0, carbs: 24, isDone: true, data: '1 quarter 2022 \n No fauls \n Good to watch',
+      name: 'Frozen Yogurt',
+      calories: 159,
+      fat: 6.0,
+      carbs: 24,
+      isDone: true,
+      data: '1 quarter 2022 \n No fauls \n Good to watch',
     }, {
       name: 'Kit kat', calories: 412, fat: 321.0, carbs: 12312312, isDone: false, data: '4 quarter 2021',
     }
