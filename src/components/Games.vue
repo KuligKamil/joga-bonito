@@ -16,16 +16,26 @@
 </template>
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator';
+import {mapState} from 'vuex';
 
-@Component
+@Component({
+  computed: {
+    ...mapState(['headers', 'games']),
+  },
+})
 export default class Games extends Vue {
   search = ''
-  headers = []
-  games = []
+  // headers = []
+  // games = []
 
   async mounted(): Promise<void> {
-    this.headers = this.$store.state.headers
-    this.games = this.$store.state.games
+    await this.$store.dispatch('loadGames')
+    // this.headers = this.$store.state.headers
+    // this.$store
+    // this.headers = this.$store.state.headers
+    // this.headers = this.$store.state.headers
+    // this.games = this.$store.state.games
+    // this.games = this.$store.state.games
   }
 }
 
